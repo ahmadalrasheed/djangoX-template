@@ -1,11 +1,27 @@
 {% extends '_base.html' %}
 {% load static %}
 
-{% block title %}Home page{% endblock title %}
+<div style="color: red;margin-left: 5%;">
+  <h3></h3>
+  <p>{{snack.purchaser}}</p>
+  <p>{{snack.description}}</p>
 
 {% block content %}
-<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-  <img src="{% static 'images/logo.png' %}" class="img-fluid" alt="DjangoX logo"/>
-  <p class="lead">A Django starter project with batteries.</p>
+
+<h1>Feedback collections</h1>
+{% for snack in object_list %}
+
+    
 </div>
+<br>
+<hr>
+<div  class="bg-white dark:bg-gray-800"  >
+  <h1 class="text-gray-900 dark:text-white">{{snack.title}}</h1>
+  <p class="text-gray-600 dark:text-gray-300">
+    {{snack.description}}
+  </p>
+</div>
+
+{% endfor %}
+
 {% endblock content %}
