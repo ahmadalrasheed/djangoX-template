@@ -1,0 +1,17 @@
+{% extends '_base.html' %}
+
+{% block content %}
+
+<h2 style="margin-left: 5%;">Snack Details !</h2>
+
+<div  style="color: red;margin-left: 5%;">
+    <p>Title :{{snack_details.title}}</p>
+    <p>Purchaser :{{snack_details.purchaser}}</p>
+    <p>Description :{{snack_details.description}}</p>
+</div>
+<a href="{{ request.get_full_path}}{{'update/'}}">Update This snack</a>
+
+
+
+
+{% endblock %}
